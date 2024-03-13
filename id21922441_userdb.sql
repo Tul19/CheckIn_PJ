@@ -33,7 +33,7 @@ CREATE TABLE `check_ins` (
   `teacher_id` int(11) NOT NULL,
   `class_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `check_in_time` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
 --
 -- Dumping data for table `check_ins`
@@ -70,7 +70,7 @@ CREATE TABLE `classes` (
   `teacher_id` int(11) NOT NULL,
   `class_time` timestamp NOT NULL DEFAULT current_timestamp(),
   `class_status` enum('OPEN','CLOSE') DEFAULT 'OPEN'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
 --
 -- Dumping data for table `classes`
@@ -108,7 +108,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `role` varchar(255) DEFAULT 'student',
   `class_status` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
 --
 -- Dumping data for table `users`
@@ -146,7 +146,7 @@ CREATE TABLE `user_location` (
   `latitude` decimal(10,8) DEFAULT NULL,
   `longitude` decimal(11,8) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
 --
 -- Dumping data for table `user_location`
